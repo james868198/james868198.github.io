@@ -1,4 +1,4 @@
 module.exports = {
-    basePath: '/my-page',
-    assetsPrefix: '/my-page',
+    basePath: '/james868198.github.io',
+    assetsPrefix: '/james868198.github.io',
 }
