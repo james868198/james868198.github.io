@@ -29,7 +29,7 @@ const StyledContactSection = styled.div`
 
 function Contact({email, contact, show}) {
     return (
-      <CSSTransition in={show} timeout={1000} classNames="fade-in">
+      <CSSTransition in={show} timeout={500} classNames="fade-in">
         <StyledContactSection id="contact">
             <Container>
                 <Row className="justify-content-md-center board-title">

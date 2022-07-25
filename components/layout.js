@@ -12,6 +12,7 @@ import { assetsPrefix } from '../next.config';
 const prefix = assetsPrefix + '/'
 
 const lightTheme = {
+    name: 'light',
     body: '#ffffff',
     text: '#000000',
     card: '#d6d6d6',
@@ -22,10 +23,11 @@ const lightTheme = {
     iconColor1: '#424242',
     iconColor2: '#616161',
     lineColor1: '#424242',
-    lineColor2: '#616161'
+    lineColor2: '#616161',
 }
 
 const darkTheme = {
+    name: 'dark',
     body: '#000000',
     text: '#ffffff',
     card: '#474747',
@@ -36,7 +38,7 @@ const darkTheme = {
     iconColor1: '#c4c4c4',
     iconColor2: '#a1a1a1',
     lineColor1: '#c4c4c4',
-    lineColor2: '#a1a1a1'
+    lineColor2: '#a1a1a1',
 }
 class Layout extends React.Component {
     constructor(props) {
@@ -44,7 +46,7 @@ class Layout extends React.Component {
 
         this.switchTheme = this.switchTheme.bind(this);
         this.state = {
-            theme: lightTheme
+            theme: darkTheme
         }
     }
     toggleMediaBar() {
@@ -77,7 +79,7 @@ class Layout extends React.Component {
                 </Head>
                 <GlobalStyles />
                 <div id="main" className="main" onScroll={this.props.handleScroll}>
-                    <MyNav prefix = {prefix} switchTheme={this.switchTheme} />
+                    <MyNav prefix = {prefix} switchTheme={this.switchTheme} theme={this.state.theme} />
                     {this.props.children}
                     <div className="footer">
                         <h5>My-Page v1. Made with <FaReact/> ReactJS</h5>

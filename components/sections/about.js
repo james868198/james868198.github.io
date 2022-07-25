@@ -11,11 +11,16 @@ const StyledAboutSection = styled.div`
     }
 
     .skill-title {
-        color: var(--text-color-2);
+        color: var(--second-color-1);
     }
 
     .skill{
         font-size: 1.3em;
+        color: var(--teal);
+    }
+
+    .board-title::after{
+        background-color: var(--teal);
     }
 `;
 const StyledAvatar = styled.div`
@@ -24,8 +29,8 @@ const StyledAvatar = styled.div`
     text-align: center;
     img {
         display: inline-block;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         filter: grayscale(100%);
         border-radius: 15px;
     }
@@ -38,7 +43,7 @@ const StyledAvatar = styled.div`
 `;
 function About({about, portrait, skills, show, prefix}) {
     return (
-      <CSSTransition key="about-title" in={show} timeout={1000} classNames="fade-in">
+      <CSSTransition key="about-title" in={show} timeout={500} classNames="fade-in">
         <StyledAboutSection id="about">
             <Container>
                 <Row>
