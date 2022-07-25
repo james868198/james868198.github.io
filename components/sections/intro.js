@@ -22,7 +22,7 @@ const StyledIntroSection = styled.div`
     .title{
         font-size: 3.5em;
         font-weight: bold;
-        color: var(--text-color-1);
+        color: var(--teal);
     }
     .description{
         font-size: 1.2em;
