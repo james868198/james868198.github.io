@@ -7,7 +7,16 @@ import {  Nav, NavItem, NavLink, Collapse,
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 const StyledNav = styled.div`
-    
+    .theme-btn {
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        &: hover {
+            background-color: ${props => props.theme.bodyColor1};
+        }
+    }
+    .navbar-toggler {
+        border-color: ${props => props.theme.lineColor1};
+    }
 `;
 const StyledNavTextBrand = styled.span`
     color: var(--text-color-1);
@@ -22,7 +31,7 @@ const StyledNavText = styled.span`
     }
 `;
 
-function MyNav({prefix, switchTheme}) {
+function MyNav({prefix, switchTheme, theme}) {
     const [isNavOpen, setIsNavOpen] = useState(false);
     function toggleNav() {
         setIsNavOpen(!isNavOpen)
@@ -55,9 +64,9 @@ function MyNav({prefix, switchTheme}) {
                             </Link>
                         </NavItem>
                     </Nav>
-                    <UncontrolledDropdown nav inNavbar className="d-flex">
+                    <UncontrolledDropdown nav inNavbar className="d-flex theme-btn">
                         <DropdownToggle nav caret>
-                            <StyledNavText>Theme</StyledNavText>
+                            {(theme.name === 'light') ? <FaSun /> : <FaMoon />}
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem onClick={() => switchTheme('light')} >

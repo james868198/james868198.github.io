@@ -123,7 +123,7 @@ export default {
         {
             name: "Trello-clone",
             description: "A pure frontend project using ReactJS to try building a Trello. Mainly focus on building list&card Drag-and-Drop(DnD) feature in the board",
-            image: "",
+            image: "static/images/trello-clone.gif",
             links: [
                 { 
                     name: "github",

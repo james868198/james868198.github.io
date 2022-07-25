@@ -6,7 +6,15 @@ import { parseDate } from '../../utils/parseUtils';
 const StyledWorksSection = styled.div`
     position: relative;
     min-height: 80vh;
-    
+    .board-title::after{
+        background-color: var(--teal);
+    }
+    .work-period {
+        color: var(--teal);
+    }
+    .work-detail li::marker {
+        color: var(--teal);
+    }
 `;
 function Works({works, show}) {
     if (!works) {
@@ -15,7 +23,7 @@ function Works({works, show}) {
         );
     }
     return (
-      <CSSTransition in={show} timeout={1000} classNames="fade-in">
+      <CSSTransition in={show} timeout={500} classNames="fade-in">
         <StyledWorksSection id="work"> 
           <Container>
             <Row>
@@ -28,7 +36,7 @@ function Works({works, show}) {
                     return (
                     <Col md = {10} key= {workId}>
                         <h4>{work.title} - {work.institution}</h4>
-                        <h6>{parseDate(work.start)} - {parseDate(work.end)}</h6>
+                        <h6 className="work-period">{parseDate(work.start)} - {parseDate(work.end)}</h6>
                         <ul className="work-detail">
                             {work.description.map((desc, descId) => {
                             return (
