@@ -1,12 +1,27 @@
 export default {
     name: "James Huang",
-    title: "Full-Stack Developer From Taiwan.",
+    title: "Ｗeb Developer From Taiwan.",
     portrait: "static/images/me.jpg",
     email: "jameshuang198681@gmail.com ",
     description: "I'm a software engineer based in San Jose, CA specializing in web development, and interested in Machine Learning, cloud development, etc.",
     about: "Hi! I'm James, a software engineer from Taiwan. I graduated from Santa Clara University in June 2020 and obtained my Master's Degree in Computer Science & Engineering. I'm a self-starter who is hardworking and ambitious to face any challenges. My goal in my engineer journey is to build products that provide the best performance and user experience.",
     contact: "If you have any questions or suggestions for this website or me, please feel free to contact me. Every suggestion or new opportunity is very welcomed. I'll try my best to get back to you!",
     experiences: [
+        {
+            institution: "Houzz",
+            where: {
+                country: "Taiwan",
+                state: "Taipei",
+                city: "Taipei City",                
+            },
+            title: "Software Engineer",
+            start: "2021-03",
+            end: "2021-12",
+            description: [
+                "Developed backend features for Houzz pro 3D services (moodboard and floorplan) with Redis and AWS S3.",
+                "Diagnosed and troubleshoot the Houzz pro 3D service and image processing service."
+            ]
+        },
         {
             institution: "MedExpert International, Inc",
             where: {
@@ -105,6 +120,26 @@ export default {
         }
     ],
     projects: [
+        {
+            name: "Trello-clone",
+            description: "A pure frontend project using ReactJS to try building a Trello. Mainly focus on building list&card Drag-and-Drop(DnD) feature in the board",
+            image: "",
+            links: [
+                { 
+                    name: "github",
+                    link: "https://github.com/james868198/trello-clone",
+                },
+                { 
+                    name: "demo",
+                    link: "https://james868198.github.io/trello-clone/",
+                }
+            ],
+            tags: [
+                "ReactJS",
+                "MaterialUI",
+                "styled-components",
+            ]
+        },
         {
             name: "Weather 3D Application",
             description: "A web application demonstrating a city's real-time weather with 3D scenario by Three.js.",
