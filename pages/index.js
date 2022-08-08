@@ -65,7 +65,7 @@ export default function Home(props) {
   },[]);
   
   return (
-    <Layout {...props} media={me.media} handleScroll = {handleScroll} >
+    <Layout {...props} media={me.media} handleScroll = {handleScroll} title={me.name} >
       <Intro  name = {me.name} desc = {me.description}  title = {me.title} />
       <About show={handleShow(aboutIn)} about = {me.about} portrait = {me.portrait} skills = {me.skills} prefix = {prefix} />
       <Works show={handleShow(workIn)} works = {me.experiences} />
