@@ -11,6 +11,9 @@ class MyDocument extends Document {
         <Head>
 
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" />
+          <link rel="shortcut icon" href="./static/logo/favicon.ico" />
+          <meta name="description" content="This is James Huang's portfolio"/>
+
         </Head>
         <body>
           <Main />
