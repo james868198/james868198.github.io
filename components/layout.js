@@ -43,7 +43,6 @@ const darkTheme = {
 class Layout extends React.Component {
     constructor(props) {
         super(props)
-
         this.switchTheme = this.switchTheme.bind(this);
         this.state = {
             theme: darkTheme

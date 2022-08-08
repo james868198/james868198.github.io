@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {  Nav, NavItem, NavLink, Collapse,
     Navbar, NavbarToggler, NavbarBrand, DropdownMenu,DropdownItem, UncontrolledDropdown, DropdownToggle } from 'reactstrap'
 import { FaMoon, FaSun } from 'react-icons/fa';
+import Logo from './logo/logo';
 
 const StyledNav = styled.div`
     .theme-btn {
@@ -39,7 +40,7 @@ function MyNav({prefix, switchTheme, theme}) {
     return (
         <StyledNav>
             <Navbar light expand="md">
-                <NavbarBrand href={prefix}><StyledNavTextBrand>My-Page</StyledNavTextBrand></NavbarBrand>
+                <NavbarBrand href={prefix}><StyledNavTextBrand><Logo theme={theme.name}/></StyledNavTextBrand></NavbarBrand>
                 <NavbarToggler onClick={toggleNav} />
                 <Collapse isOpen={isNavOpen} navbar>
                     <Nav className="mr-auto" navbar>
